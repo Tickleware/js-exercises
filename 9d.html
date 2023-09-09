@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 9d, e, and f</title>
+</head>
+<body>
+    <input placeholder = 'Name' class="js-name-input" onkeydown="handleNameKeydown(event)">
+    <button onclick="showName()">Submit</button>
+    <p class="js-name"></p>
+
+
+
+
+
+
+    <script>
+        function handleNameKeydown() {
+            if(event.key === 'Enter') {
+                showName();
+            }
+        }
+
+
+
+
+        function showName() {
+            const inputElement = document.querySelector('.js-name-input');
+            let name = String(inputElement.value)
+
+            document.querySelector('.js-name').innerHTML = (`Your name is: ${name}`)
+        }
+    </script>
+</body>
+</html>
